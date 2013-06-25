@@ -61,7 +61,7 @@ module OmniAuth
           }
 
           result = access_token.post('/method/users.get', :params => params).parsed["response"]
-          result && result.first ? result.first : nil
+          result && result.first ? result.first : {}
         end
       end
 
